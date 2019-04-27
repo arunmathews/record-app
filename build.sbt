@@ -37,6 +37,7 @@ libraryDependencies ++= Seq(
   //General utils
   "com.beachape" %% "enumeratum" % EnumeratumVersion,
   "com.beachape" %% "enumeratum-json4s" % EnumeratumVersion,
+  "org.apache.httpcomponents" % "httpcore" % "4.4.11",
   //Test
   "org.scalatra" %% "scalatra-scalatest" % ScalatraVersion % "test",
   "org.scalatra" %% "scalatra-specs2" % ScalatraVersion % "test",
