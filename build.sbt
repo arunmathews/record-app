@@ -28,7 +28,6 @@ libraryDependencies ++= Seq(
   "com.iheart" %% "ficus" % "1.4.5",
   //Database
   "com.typesafe.slick" %% "slick" % SlickVersion,
-  "com.typesafe.slick" %% "slick-codegen" % SlickVersion,
   "com.mchange" % "c3p0" % "0.9.5.4",
   "com.h2database" % "h2" % "1.4.199",
   "org.flywaydb" % "flyway-core" % FlywayVersion,
