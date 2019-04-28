@@ -12,5 +12,9 @@ import org.scalatra.json.JacksonJsonSupport
 trait JsonSupportMixin
   extends JacksonJsonSupport {
 
+  before() {
+    contentType = formats("json")
+  }
+
   protected implicit lazy val jsonFormats: Formats = JsonFormats.jsonFormat
 }
