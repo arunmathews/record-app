@@ -40,7 +40,7 @@ class RecordRequestHandler(recordApi: RecordApi)(implicit val ec: ExecutionConte
 }
 
 object RecordRequestHandler {
-  sealed trait SearchTypeInput extends EnumEntry
+  sealed trait SearchTypeInput extends EnumEntry with EnumEntry.Snakecase
 
   object SearchTypeInput extends Enum[SearchTypeInput] {
     val values = findValues

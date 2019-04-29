@@ -34,9 +34,9 @@ class ScalatraBootstrap extends LifeCycle with BootstrapConfigHelper {
   val cpds = new ComboPooledDataSource
   val env = getFromSysOrConf(scalatraEnvKey, conf)
   cpds.setMaxPoolSize(conf.getInt("c3p0.maxPoolSize"))
-  cpds.setJdbcUrl(getFromSysOrConf(jdbcUrlKey, conf))
-  cpds.setUser(getFromSysOrConf(dbUserKey, conf))
-  cpds.setPassword(getFromSysOrConf(dbPasswordKey, conf))
+  cpds.setJdbcUrl(dbUrl)
+  cpds.setUser(dbUser)
+  cpds.setPassword(dbPassword)
   val tablesWithDb = new H2TablesWithDb(cpds)
 
   logger.info("Created c3p0 connection pool and db")

@@ -6,6 +6,25 @@ version := "0.1.0-SNAPSHOT"
 
 scalaVersion := "2.12.8"
 
+test in assembly := {}
+
+assembly / assemblyExcludedJars := {
+  val cp = (assembly / fullClasspath).value
+  cp filter {_.data.getName == "slf4j-nop-1.6.4.jar"}
+}
+
+assembly / assemblyMergeStrategy := {
+  case PathList("mime.types") =>
+    MergeStrategy.last
+  case "conf/logback.xml" =>
+    MergeStrategy.discard
+  case x =>
+    val oldStrategy = (assembly / assemblyMergeStrategy).value
+    oldStrategy(x)
+}
+
+assembly / assemblyJarName := "commandline-assembly.jar"
+
 val ScalatraVersion = "2.6.+"
 val SlickVersion = "3.3.0"
 val Json4sVersion = "3.6.5"

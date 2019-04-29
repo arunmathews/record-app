@@ -10,7 +10,7 @@ import org.json4s.JsonAST.{JNull, JString}
   */
 object JsonDateFormats {
   val dateFormatter = DateTimeFormat.forPattern("MM/dd/YYYY")
-
+  val dateTimeFormatter = DateTimeFormat.forPattern("HHmmss'T'ddMMYYYY")
 }
 
 object DateSerializer extends CustomSerializer[LocalDate] (format =>
