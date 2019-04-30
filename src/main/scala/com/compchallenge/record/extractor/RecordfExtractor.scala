@@ -6,6 +6,9 @@ import com.compchallenge.record.validation.BOValidationFailureCode
 import com.compchallenge.record.datetime.JsonDateFormats
 import com.compchallenge.record.handler.RecordRequestHandler.SearchTypeInput
 
+/**
+  * Extracts records from inputs formatted in different ways
+  */
 object RecordExtractor {
   val wordParser = """\w+""".r
 

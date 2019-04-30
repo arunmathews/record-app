@@ -19,6 +19,9 @@ import com.compchallenge.record.service.RecordServlet
 
 import scala.concurrent.ExecutionContext.Implicits.global
 
+/**
+  * Bootstraps Scalatra servlets
+  */
 class ScalatraBootstrap extends LifeCycle with BootstrapConfigHelper {
   val logger = LoggerFactory.getLogger(getClass)
   val baseConf = ConfigFactory.load()

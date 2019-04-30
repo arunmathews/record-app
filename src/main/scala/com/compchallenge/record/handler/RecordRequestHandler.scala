@@ -13,6 +13,10 @@ import com.compchallenge.record.handler.RecordRequestHandler.SearchTypeInput.Gen
 import com.compchallenge.record.handler.RecordRequestHandler.SearchTypeInput.BirthDateAsc
 import com.compchallenge.record.handler.RecordRequestHandler.SearchTypeInput.LastNameDesc
 
+/**
+  * Busines logic layer that handles requests from caller. This uses provided api
+  * to store and retrieve records
+  */
 class RecordRequestHandler(recordApi: RecordApi)(implicit val ec: ExecutionContext) {
   def createRecord(record: RecordBO): Future[RecordBO] = {
     recordApi.createRecord(record)

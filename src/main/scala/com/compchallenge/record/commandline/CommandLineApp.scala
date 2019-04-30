@@ -26,6 +26,9 @@ import scala.concurrent._
 import scala.concurrent.duration.Duration
 import scala.util.{Try => UTry, Failure => UFailure, Success => USuccess}
 
+/**
+  * Entry point for command line call to parse input files and create sorted output files
+  */
 object CommandLineApp extends App {
   if (args.length < 2) {
     println(s"Not enough args for extracting and returning records. Need 1 or more input file and 1 output file location")

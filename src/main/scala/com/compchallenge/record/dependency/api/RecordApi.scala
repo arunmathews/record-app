@@ -6,6 +6,9 @@ import com.compchallenge.record.dependency.api.RecordApi.GetRecordsSpecifiers
 
 import scala.concurrent.Future
 
+/**
+  * Contract for record api storage and retrieval
+  */
 trait RecordApi {
   def createRecord(record: RecordBO): Future[RecordBO]
 
